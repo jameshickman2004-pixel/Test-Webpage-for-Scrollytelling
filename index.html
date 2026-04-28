@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two-Chart Scrollytelling Story</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Georgia, serif;
+line-height:1.6;
+background:#fafafa;
+color:#222;
+overflow-x:hidden;
+}
+
+.chapter{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:8vw;
+}
+
+.chapter-text{
+max-width:750px;
+font-size:1.4rem;
+}
+
+h1{
+font-size:4rem;
+margin-bottom:1rem;
+}
+
+h2{
+font-size:2.8rem;
+margin-bottom:1rem;
+}
+
+.scrolly{
+display:flex;
+max-width:1500px;
+margin:auto;
+}
+
+.steps{
+width:45%;
+padding:0 5vw;
+}
+
+.step{
+min-height:100vh;
+display:flex;
+align-items:center;
+opacity:.3;
+transition:.4s;
+}
+
+.step.active{
+opacity:1;
+}
+
+.card{
+background:#fff;
+padding:2rem;
+border-radius:16px;
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.card h3{
+font-size:2rem;
+margin-bottom:1rem;
+}
+
+.graphic{
+width:55%;
+height:100vh;
+position:sticky;
+top:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f3f3f3;
+padding:3vw;
+}
+
+.chart-box{
+background:white;
+padding:20px;
+border-radius:16px;
+width:100%;
+max-width:850px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.annotation{
+position:absolute;
+bottom:50px;
+right:50px;
+max-width:320px;
+background:rgba(255,255,255,.95);
+padding:1rem;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,.1);
+}
+
+footer{
+padding:120px 8vw;
+text-align:center;
+}
+
+@media(max-width:900px){
+
+.scrolly{
+display:block;
+}
+
+.steps,.graphic{
+width:100%;
+}
+
+.graphic{
+position:relative;
+height:auto;
+min-height:70vh;
+}
+
+.annotation{
+position:relative;
+bottom:auto;
+right:auto;
+margin-top:20px;
+max-width:100%;
+}
+
+h1{
+font-size:2.6rem;
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
+<section class="chapter">
+<div class="chapter-text">
+<h1>Headline Placeholder</h1>
+<p>
+TODO: Introduce the central question of your story.
+Explain what readers will learn through the two visualizations.
+</p>
+</div>
+</section>
+
+<!-- CHART 1 -->
+<section class="scrolly">
+
+<div class="steps">
+
+<div class="step active"
+data-note="Chart 1 annotation placeholder: call out an opening insight.">
+<div class="card">
+<h3>Chart 1 — Step 1</h3>
+<p>
+TODO: First explanatory scroll text.
+</p>
+</div>
+</div>
+
+<div class="step"
+data-note="Chart 1 annotation placeholder: highlight a major pattern.">
+<div class="card">
+<h3>Chart 1 — Step 2</h3>
+<p>
+TODO: Explain what changes in the data here.
+</p>
+</div>
+</div>
+
+<div class="step"
+data-note="Chart 1 annotation placeholder: compare groups or shifts.">
+<div class="card">
+<h3>Chart 1 — Step 3</h3>
+<p>
+TODO: Add more narrative while chart remains pinned.
+</p>
+</div>
+</div>
+
+<div class="step"
+data-note="Chart 1 final takeaway annotation.">
+<div class="card">
+<h3>Chart 1 — Conclusion</h3>
+<p>
+TODO: Summarize insight from first chart.
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="graphic">
+<div class="chart-box">
+
+<!-- FIRST FLOURISH -->
+<div class="flourish-embed flourish-chart"
+data-src="visualisation/28733470">
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+</div>
+
+</div>
+
+<div class="annotation note">
+Chart 1 annotations appear here while scrolling.
+</div>
+
+</div>
+
+</section>
+
+<!-- BETWEEN CHARTS TRANSITION -->
+<section class="chapter">
+<div class="chapter-text">
+<h2>Transition Section Placeholder</h2>
+<p>
+TODO:
+Bridge from chart one to chart two.
+
+Explain how the second visualization deepens or complicates
+what readers just learned.
+</p>
+</div>
+</section>
+
+<!-- CHART 2 -->
+<section class="scrolly">
+
+<div class="steps">
+
+<div class="step active"
+data-note="Chart 2 annotation placeholder: introduce second visualization.">
+<div class="card">
+<h3>Chart 2 — Step 1</h3>
+<p>
+TODO: First scroll text for second chart.
+</p>
+</div>
+</div>
+
+<div class="step"
+data-note="Chart 2 annotation placeholder: highlight another pattern.">
+<div class="card">
+<h3>Chart 2 — Step 2</h3>
+<p>
+TODO: Add interpretation for this stage.
+</p>
+</div>
+</div>
+
+<div class="step"
+data-note="Chart 2 annotation placeholder: call out contrast or surprise.">
+<div class="card">
+<h3>Chart 2 — Step 3</h3>
+<p>
+TODO: Add narrative during second chart scroll.
+</p>
+</div>
+</div>
+
+<div class="step"
+data-note="Final takeaway annotation for chart two.">
+<div class="card">
+<h3>Chart 2 — Conclusion</h3>
+<p>
+TODO: Conclude second chart.
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="graphic">
+<div class="chart-box">
+
+<!-- SECOND FLOURISH -->
+<div class="flourish-embed flourish-chart"
+data-src="visualisation/28733871">
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+</div>
+
+</div>
+
+<div class="annotation note">
+Chart 2 annotations appear here while scrolling.
+</div>
+
+</div>
+
+</section>
+
+<footer>
+TODO:
+Closing argument, sources, methodology, credits.
+</footer>
+
+<script>
+document.querySelectorAll('.scrolly').forEach(section=>{
+
+const steps = section.querySelectorAll('.step');
+const note = section.querySelector('.note');
+
+const observer = new IntersectionObserver(
+(entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+
+steps.forEach(step=>step.classList.remove('active'));
+entry.target.classList.add('active');
+
+note.textContent = entry.target.dataset.note;
+
+}
+});
+},
+{
+threshold:0.6
+}
+);
+
+steps.forEach(step=>{
+observer.observe(step);
+});
+
+});
+</script>
+
+</body>
+</html>
